@@ -12,34 +12,60 @@
     <!-- supposed to work with both edit and create recipe forms -->
     <!-- needs submit_function and a list of 5 blank ingredients for createRecipe() -->
     <script id="recipe-form-template" type="text/x-handlebars-template">
+<<<<<<< HEAD
       <form onsubmit= {{ submitFunction }} id= {{ formId }}>
+=======
+      <form onsubmit= {{ submitFunction }} id='recipe-form'>
+>>>>>>> e60993f0ac9ce432f0e73decdfe8839a4187ff70
         {{> recipeFormPartial }}
         <input type="submit" name="Submit" />
       </form>
     </script>
     <!-- displays recipe info -->
     <script type="text/x-handlebars-template" id="recipe-form-partial" >
+<<<<<<< HEAD
         Name: <input type="text" id="name" value= "{{ name }}" ><br>
         Description: <input type="text" id="description" value= "{{ description }}" ><br>
         Ingredients:
         {{#each ingredients}}
           <input type="text" name="ingredients" value= "{{ name }}" >
+=======
+        Name: <input type="text" id="name">{{name}}</input><br>
+        Description: <input type="text" id="description" />{{description}}</input><br>
+        Ingredients:
+        {{#each ingredients}}
+          <input type="text" name="ingredients" />{{name}}</input>
+>>>>>>> e60993f0ac9ce432f0e73decdfe8839a4187ff70
         {{/each}}
     </script>
 
     <!-- displays recipe info -->
     <script id="recipe-template" type="text/x-handlebars-template">
+<<<<<<< HEAD
       <h3 id="recipe-name">{{name}}</h3>
       <a onclick="displayEditForm();">Edit Recipe</a>
       {{> recipeDetailsPartial }}
 
+=======
+      <div class="recipe-card">
+        <h3 id="recipe-name">{{name}}</h3>
+        <a href="displayEditForm();">Edit Recipe</a>
+        {{> recipeDetailsPartial }}
+      </div>
+>>>>>>> e60993f0ac9ce432f0e73decdfe8839a4187ff70
     </script>
 
     <!-- partial for description and ingredients -->
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p id='recipe-description'>{{description}}</p>
       <ul>
+<<<<<<< HEAD
         {{#each ingredients}}{{ displayIngredient this}}{{/each}}
+=======
+        {{#each ingredients}}
+          {{ displayIngredient }}
+        {{/each}}
+>>>>>>> e60993f0ac9ce432f0e73decdfe8839a4187ff70
       </ul>
     </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
